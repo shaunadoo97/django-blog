@@ -78,9 +78,16 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.gitpod.io",
+    "https://*.herokuapp.com"
+]
+
 SECRET_KEY = os.environ.get("my_secret_key_is_this")
 
 # Password validation
