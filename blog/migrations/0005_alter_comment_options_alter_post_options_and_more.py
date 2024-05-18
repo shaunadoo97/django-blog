@@ -18,14 +18,4 @@ class Migration(migrations.Migration):
             name='post',
             options={'ordering': ['created_on']},
         ),
-        migrations.AddField(
-            model_name='post',
-            name='field_2',
-            field=models.IntegerField(default=42),
-        ),
-        migrations.AddField(
-            model_name='post',
-            name='field_3',
-            field=models.CharField(null=True),
-        ),
     ]
