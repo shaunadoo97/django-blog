@@ -29,7 +29,14 @@
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
-
+    <main class ="flex-shrink-0 main-bg">
+        {% if user.is_authenticated %}
+        <p class="text-end m-3">You are logged in as {{ user }}
+        </p>
+        {% else %}
+        <p class="text-end m-3">You are not logged in </p>
+        {% endif %}
+    </main>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
